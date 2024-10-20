@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const problemCategories = {
         stress: {
-            keywords: ["stress", "anxiety", "overwhelm", "pressure", "tension", "burnout"],
+            keywords: ["stress", "anxiety", "Anxious", "Worried", "Tired", "Fatigued", "overwhelm", "pressure", "tension", "sad", "burnout"],
             responses: [
                 "It sounds like you're dealing with significant stress. Let's explore some strategies to help you manage and reduce it:",
                 "Stress can be overwhelming, but there are effective ways to address it. Here are some tailored suggestions to help you cope:",
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         relationship: {
-            keywords: ["relationship", "partner", "family", "friend", "communication", "conflict"],
+            keywords: ["relationship", "partner", "family", "friend", "communication", "Arguments", "lonely", "conflict"],
             responses: [
                 "Relationship challenges can be complex. Based on what you've shared, here are some potential steps to improve your situation:",
                 "Navigating relationships requires patience and understanding. Consider these insights to help address your concerns:",
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         career: {
-            keywords: ["career", "job", "work", "profession", "employment", "business"],
+            keywords: ["career", "job", "work", "profession", "Underappreciated", "Job insecurity", "Work-life balance", "employment", "Conflict with coworkers", "business"],
             responses: [
                 "Career decisions can be pivotal. Given your current situation, here are some thoughts to guide your professional journey:",
                 "Your career concerns are important. Let's look at some strategies that might help you move forward and achieve your goals:",
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         personal_growth: {
-            keywords: ["growth", "improve", "development", "self-improvement", "learning", "goals"],
+            keywords: ["growth", "Lack of motivation", "improve", "development", "self-improvement", "learning", "goals"],
             responses: [
                 "Personal growth is a journey. From what you've described, here are some areas you might want to focus on for self-improvement:",
                 "Your desire for personal development is commendable. Consider these strategies to support your growth and achieve your goals:",
@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         finance: {
-            keywords: ["money", "finance", "budget", "savings", "debt", "investment"],
+            keywords: ["money", "Job loss", "finance", "budget", "savings", "debt", "investment"],
             responses: [
                 "Financial matters can be complex. Based on your situation, here are some strategies to improve your financial health:",
                 "Managing finances effectively is crucial for long-term stability. Consider these approaches to address your financial concerns:",
