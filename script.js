@@ -98,40 +98,187 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Regularly step out of your comfort zone in small ways to build resilience and adaptability."
             ]
         },
-... (184lignes restantes)
-Réduire
-message.txt
-20 Ko
-lf9ih — Aujourd’hui à 21:32
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wisdom & Advice - Share Your Problems</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Wisdom & Advice</h1>
-        <p>Share your problems, get tailored advice and philosophical insights</p>
-    </header>
-    <main>
-        <section id="problem-input">
-            <h2>Describe Your Problem</h2>
-            <textarea id="problem-text" rows="6" placeholder="Please describe your problem in detail..."></textarea>
-            <button id="submit-problem">Get Advice</button>
-        </section>
-        <section id="ai-response">
-            <h2>Tailored Advice and Wisdom</h2>
-            <div id="advice-text"></div>
-            <div id="quotes-container"></div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Wisdom & Advice. Remember, for serious issues, always consult a professional.</p>
-    </footer>
-    <script src="script.js"></script>
-</body>
-</html>
+        decision_making: {
+            keywords: ["decision", "choice", "uncertain", "dilemma", "options", "crossroads"],
+            responses: [
+                "Making decisions can be challenging. Given your situation, here are some frameworks that might help you evaluate your options:",
+                "Your decision-making dilemma is understandable. Let's break it down with these analytical approaches to help you gain clarity:",
+                "To help with your decision, consider these structured methods of evaluation to weigh your options effectively:"
+            ],
+            advice: [
+                "Use a decision matrix to weigh the pros and cons of each option against your most important criteria.",
+                "Apply the 10/10/10 rule: How will you feel about this decision 10 minutes, 10 months, and 10 years from now?",
+                "Consult with trusted friends or mentors for different perspectives, but remember the final decision is yours.",
+                "Try the 'fear-setting' exercise: identify and evaluate the worst-case scenarios for each option.",
+                "Use the 'Eisenhower Matrix' to prioritize decisions based on their importance and urgency.",
+                "Practice visualization: imagine yourself having made each choice and pay attention to your emotional response.",
+                "Set a specific deadline for making the decision to avoid analysis paralysis.",
+                "For complex decisions, break them down into smaller, more manageable choices.",
+                "Consider the opportunity cost of each option – what will you be giving up by choosing one path over another?",
+                "After making a decision, commit to it fully and avoid second-guessing yourself."
+            ]
+        },
+        health: {
+            keywords: ["health", "wellness", "fitness", "diet", "exercise", "medical"],
+            responses: [
+                "Your health is a crucial aspect of overall well-being. Based on your concerns, here are some strategies to improve your health:",
+                "Taking care of your health is important. Consider these evidence-based approaches to address your health-related issues:",
+                "I understand you're focusing on your health. Here are some tailored suggestions to help you achieve your wellness goals:"
+            ],
+            advice: [
+                "Establish a consistent sleep schedule, aiming for 7-9 hours of quality sleep each night.",
+                "Incorporate regular physical activity into your routine, aiming for at least 150 minutes of moderate exercise per week.",
+                "Adopt a balanced diet rich in fruits, vegetables, whole grains, and lean proteins.",
+                "Stay hydrated by drinking adequate water throughout the day (about 8 glasses or 2 liters).",
+                "Practice stress-reduction techniques like meditation, deep breathing, or yoga.",
+                "Schedule regular check-ups with your healthcare provider for preventive care.",
+                "Limit processed foods, sugary drinks, and excessive alcohol consumption.",
+                "Take breaks from prolonged sitting and incorporate movement into your daily routine.",
+                "Consider mindful eating practices to improve your relationship with food and nutrition.",
+                "Prioritize mental health by seeking support when needed and engaging in activities that bring you joy."
+            ]
+        },
+        finance: {
+            keywords: ["money", "finance", "budget", "savings", "debt", "investment"],
+            responses: [
+                "Financial matters can be complex. Based on your situation, here are some strategies to improve your financial health:",
+                "Managing finances effectively is crucial for long-term stability. Consider these approaches to address your financial concerns:",
+                "I understand you're focusing on your financial situation. Here are some tailored suggestions to help you achieve your financial goals:"
+            ],
+            advice: [
+                "Create a detailed budget to track your income and expenses, identifying areas for potential savings.",
+                "Set up an emergency fund aiming for 3-6 months of living expenses.",
+                "Prioritize paying off high-interest debt, such as credit card balances.",
+                "Automate your savings and bill payments to ensure consistency and avoid late fees.",
+                "Educate yourself on basic investing principles and consider low-cost index funds for long-term growth.",
+                "Review and optimize your tax strategy, taking advantage of available deductions and credits.",
+                "Shop around for better rates on insurance, utilities, and other regular expenses.",
+                "Consider additional income streams or side hustles to boost your earnings.",
+                "Set specific, measurable financial goals with realistic timelines.",
+                "Regularly review and adjust your financial plan as your circumstances change."
+            ]
+        }
+    };
+
+    function getMatchingQuotes(problem, n) {
+        const problemWords = problem.toLowerCase().split(/\s+/);
+        const scoredQuotes = philosophicalQuotes.map(quote => ({
+            ...quote,
+            score: quote.keywords.reduce((sum, keyword) => 
+                sum + (problemWords.includes(keyword) ? 1 : 0), 0)
+        }));
+        
+        return scoredQuotes
+            .sort((a, b) => b.score - a.score)
+            .slice(0, n);
+    }
+
+    function calculateSimilarity(str1, str2) {
+        const set1 = new Set(str1.toLowerCase().split(/\s+/));
+        const set2 = new Set(str2.toLowerCase().split(/\s+/));
+        const intersection = new Set([...set1].filter(x => set2.has(x)));
+        const union = new Set([...set1, ...set2]);
+        return intersection.size / union.size;
+    }
+
+    function analyzeAndRespond(problem) {
+        let bestMatches = [];
+        const similarityThreshold = 0.1;
+
+        for (const [category, data] of Object.entries(problemCategories)) {
+            const similarity = Math.max(...data.keywords.map(keyword => calculateSimilarity(problem, keyword)));
+            if (similarity > similarityThreshold) {
+                bestMatches.push({ category, data, similarity });
+            }
+        }
+
+        bestMatches.sort((a, b) => b.similarity - a.similarity);
+
+        let response = '';
+
+        if (bestMatches.length > 0) {
+            const topMatch = bestMatches[0];
+            const { category, data } = topMatch;
+            const randomResponse = data.responses[Math.floor(Math.random() * data.responses.length)];
+            response += `<p>${randomResponse}</p>`;
+
+            const shuffledAdvice = [...data.advice].sort(() => 0.5 - Math.random());
+            response += '<ul>' + shuffledAdvice.slice(0, 5).map(advice => `<li>${advice}</li>`).join('') + '</ul>';
+
+            if (bestMatches.length > 1) {
+                response += `<p>Your situation seems to touch on multiple areas. Here are a couple more suggestions that might be relevant:</p>`;
+                for (let i = 1; i < Math.min(3, bestMatches.length); i++) {
+                    const { data } = bestMatches[i];
+                    const additionalAdvice = data.advice[Math.floor(Math.random() * data.advice.length)];
+                    response += `<p>- ${additionalAdvice}</p>`;
+                }
+            }
+        } else {
+            response = `<p>I understand you're facing a challenge. While I don't have specific advice for your unique situation, here are some general strategies that often help:</p>
+                <ul>
+                    <li>Break down your problem into smaller, manageable parts.</li>
+                    <li>Consider talking to a trusted friend or professional about your concerns.</li>
+                    <li>Remember that many problems are temporary, even if they feel overwhelming now.</li>
+                    <li>Take care of your physical and mental health with regular exercise, good nutrition, and adequate rest.</li>
+                    <li>Practice self-compassion and don't hesitate to seek help when you need it.</li>
+                </ul>`;
+        }
+
+        return `
+            <h3>AI-Generated Advice:</h3>
+            ${response}
+            <p>Remember, you're not alone in facing this challenge. If you need more specific help, don't hesitate to reach out to a professional or trusted individual who can provide personalized guidance.</p>
+        `;
+    }
+
+    function displayQuotes(quotes) {
+        quotesContainer.innerHTML = "<h3>Philosophical Insights:</h3>" + 
+            quotes.map(quote => `
+                <div class="quote">
+                    <p>${quote.text}</p>
+                    <p class="quote-author">- ${quote.author}</p>
+                </div>
+            `).join('');
+    }
+
+    function handleSubmit() {
+        const problem = problemText.value.trim();
+        if (problem) {
+            try {
+                const advice = analyzeAndRespond(problem);
+                adviceText.innerHTML = `<p><strong>Your concern:</strong> ${escapeHTML(problem)}</p>${advice}`;
+                const matchedQuotes = getMatchingQuotes(problem, 3);
+                displayQuotes(matchedQuotes);
+                problemText.value = '';
+            } catch (error) {
+                console.error('Error processing problem:', error);
+                adviceText.innerHTML = '<p>An error occurred while processing your input. Please try again.</p>';
+            }
+        } else {
+            adviceText.innerHTML = '<p>Please describe your concern before submitting.</p>';
+            quotesContainer.innerHTML = '';
+        }
+    }
+
+    function escapeHTML(str) {
+        const htmlEntities = {
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;',
+            "'": '&#39;'
+        };
+        return str.replace(/[&<>"']/g, char => htmlEntities[char] || char);
+    }
+
+    // Add event listener to the submit button
+    submitButton.addEventListener('click', handleSubmit);
+
+    // Add event listener for 'Enter' key press in the textarea
+    problemText.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter' && !event.shiftKey) {
+            event.preventDefault(); // Prevent default to avoid newline in textarea
+            handleSubmit();
+        }
+    });
+});
