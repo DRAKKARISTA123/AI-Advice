@@ -3,30 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wisdom & Advice - Share Your Problems</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <title>AI Advice Generator</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #FF00FF, #00FFFF);
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            max-width: 800px;
+            width: 90%;
+        }
+
+        h1 {
+            text-align: center;
+            color: #FF00FF;
+            margin-bottom: 1.5rem;
+        }
+
+        #problem-text {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        #submit-problem {
+            display: block;
+            width: 100%;
+            padding: 0.7rem;
+            background-color: #FF00FF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #submit-problem:hover {
+            background-color: #CC00CC;
+        }
+
+        #advice-text, #quotes-container {
+            margin-top: 2rem;
+            background-color: white;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h3 {
+            color: #00CCCC;
+            margin-top: 0;
+        }
+
+        .quote {
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .quote-author {
+            text-align: right;
+            font-weight: bold;
+            color: #FF00FF;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: 95%;
+                padding: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Wisdom & Advice</h1>
-        <p>Share your problems, get tailored advice and philosophical insights</p>
-    </header>
-    <main>
-        <section id="problem-input">
-            <h2>Describe Your Problem</h2>
-            <textarea id="problem-text" rows="6" placeholder="Please describe your problem in detail..."></textarea>
-            <button id="submit-problem">Get Advice</button>
-        </section>
-        <section id="ai-response">
-            <h2>Tailored Advice and Wisdom</h2>
-            <div id="advice-text"></div>
-            <div id="quotes-container"></div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Wisdom & Advice. Remember, for serious issues, always consult a professional.</p>
-    </footer>
+    <div class="container">
+        <h1>AI Advice Generator</h1>
+        <textarea id="problem-text" rows="4" placeholder="Describe your concern or situation here..."></textarea>
+        <button id="submit-problem">Get Advice</button>
+        <div id="advice-text"></div>
+        <div id="quotes-container"></div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
