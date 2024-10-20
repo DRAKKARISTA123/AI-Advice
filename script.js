@@ -21,9 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
         stress: {
             keywords: ["stress", "anxiety", "Anxious", "Worried", "Tired", "Fatigued", "overwhelm", "pressure", "tension", "sad", "burnout"],
             responses: [
-                "It sounds like you're dealing with significant stress. Let's explore some strategies to help you manage and reduce it:",
+                "I appreciate you opening up to me. Just a heads up, my responses might not cover all aspects of your situation, so I encourage you to explore various perspectives as well. It sounds like you're dealing with significant stress. Let's explore some strategies to help you manage and reduce it:",
                 "Stress can be overwhelming, but there are effective ways to address it. Here are some tailored suggestions to help you cope:",
-                "I understand that stress is affecting you. Consider these evidence-based approaches to reduce its impact and improve your well-being:"
+                "I appreciate you opening up to me. Just a heads up, my responses might not cover all aspects of your situation, so I encourage you to explore various perspectives as well. I understand that stress is affecting you. Consider these evidence-based approaches to reduce its impact and improve your well-being:"
             ],
             advice: [
                 "Practice mindfulness or meditation for 10-15 minutes daily to calm your mind and reduce stress.",
@@ -41,9 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
         relationship: {
             keywords: ["relationship", "partner", "family", "friend", "communication", "Arguments", "lonely", "conflict"],
             responses: [
-                "Relationship challenges can be complex. Based on what you've shared, here are some potential steps to improve your situation:",
-                "Navigating relationships requires patience and understanding. Consider these insights to help address your concerns:",
-                "Your relationship concerns are valid. Here are some strategies that might help improve your communication and connection:"
+                "I appreciate you opening up to me. Just a heads up, my responses might not cover all aspects of your situation, so I encourage you to explore various perspectives as well. Relationship challenges can be complex. Based on what you've shared, here are some potential steps to improve your situation:",
+                "I appreciate you opening up to me. Just a heads up, my responses might not cover all aspects of your situation, so I encourage you to explore various perspectives as well. Navigating relationships requires patience and understanding. Consider these insights to help address your concerns:",
+                "I appreciate you opening up to me. Just a heads up, my responses might not cover all aspects of your situation, so I encourage you to explore various perspectives as well. Your relationship concerns are valid. Here are some strategies that might help improve your communication and connection:"
             ],
             advice: [
                 "Practice active listening: focus on understanding your partner's perspective without immediately responding or judging.",
@@ -61,9 +61,9 @@ document.addEventListener('DOMContentLoaded', () => {
         career: {
             keywords: ["career", "job", "work", "profession", "Underappreciated", "Job insecurity", "Work-life balance", "employment", "Conflict with coworkers", "business"],
             responses: [
-                "Career decisions can be pivotal. Given your current situation, here are some thoughts to guide your professional journey:",
-                "Your career concerns are important. Let's look at some strategies that might help you move forward and achieve your goals:",
-                "Based on what you've shared about your career, here are some tailored suggestions to help you navigate your professional path:"
+                "I appreciate you opening up to me. Just a heads up, my responses might not cover all aspects of your situation, so I encourage you to explore various perspectives as well. Career decisions can be pivotal. Given your current situation, here are some thoughts to guide your professional journey:",
+                "I appreciate you opening up to me. Just a heads up, my responses might not cover all aspects of your situation, so I encourage you to explore various perspectives as well. Your career concerns are important. Let's look at some strategies that might help you move forward and achieve your goals:",
+                "I appreciate you opening up to me. Just a heads up, my responses might not cover all aspects of your situation, so I encourage you to explore various perspectives as well. Based on what you've shared about your career, here are some tailored suggestions to help you navigate your professional path:"
             ],
             advice: [
                 "Conduct a SWOT analysis (Strengths, Weaknesses, Opportunities, Threats) of your current career situation.",
@@ -81,9 +81,9 @@ document.addEventListener('DOMContentLoaded', () => {
         personal_growth: {
             keywords: ["growth", "Lack of motivation", "improve", "development", "self-improvement", "learning", "goals"],
             responses: [
-                "Personal growth is a journey. From what you've described, here are some areas you might want to focus on for self-improvement:",
-                "Your desire for personal development is commendable. Consider these strategies to support your growth and achieve your goals:",
-                "Based on your goals for personal growth, here are some evidence-based approaches you might find helpful in your journey:"
+                "I appreciate you opening up to me. Just a heads up, my responses might not cover all aspects of your situation, so I encourage you to explore various perspectives as well. Personal growth is a journey. From what you've described, here are some areas you might want to focus on for self-improvement:",
+                "I appreciate you opening up to me. Just a heads up, my responses might not cover all aspects of your situation, so I encourage you to explore various perspectives as well. Your desire for personal development is commendable. Consider these strategies to support your growth and achieve your goals:",
+                "I appreciate you opening up to me. Just a heads up, my responses might not cover all aspects of your situation, so I encourage you to explore various perspectives as well. Based on your goals for personal growth, here are some evidence-based approaches you might find helpful in your journey:"
             ],
             advice: [
                 "Start a daily journal to reflect on your thoughts, feelings, and progress towards your goals.",
@@ -101,9 +101,9 @@ document.addEventListener('DOMContentLoaded', () => {
         decision_making: {
             keywords: ["decision", "choice", "uncertain", "dilemma", "options", "crossroads"],
             responses: [
-                "Making decisions can be challenging. Given your situation, here are some frameworks that might help you evaluate your options:",
-                "Your decision-making dilemma is understandable. Let's break it down with these analytical approaches to help you gain clarity:",
-                "To help with your decision, consider these structured methods of evaluation to weigh your options effectively:"
+                "I appreciate you opening up to me. Just a heads up, my responses might not cover all aspects of your situation, so I encourage you to explore various perspectives as well. Making decisions can be challenging. Given your situation, here are some frameworks that might help you evaluate your options:",
+                "I appreciate you opening up to me. Just a heads up, my responses might not cover all aspects of your situation, so I encourage you to explore various perspectives as well. Your decision-making dilemma is understandable. Let's break it down with these analytical approaches to help you gain clarity:",
+                "I appreciate you opening up to me. Just a heads up, my responses might not cover all aspects of your situation, so I encourage you to explore various perspectives as well. To help with your decision, consider these structured methods of evaluation to weigh your options effectively:"
             ],
             advice: [
                 "Use a decision matrix to weigh the pros and cons of each option against your most important criteria.",
@@ -121,9 +121,9 @@ document.addEventListener('DOMContentLoaded', () => {
         health: {
             keywords: ["health", "wellness", "fitness", "diet", "exercise", "medical"],
             responses: [
-                "Your health is a crucial aspect of overall well-being. Based on your concerns, here are some strategies to improve your health:",
-                "Taking care of your health is important. Consider these evidence-based approaches to address your health-related issues:",
-                "I understand you're focusing on your health. Here are some tailored suggestions to help you achieve your wellness goals:"
+                "I appreciate you opening up to me. Just a heads up, my responses might not cover all aspects of your situation, so I encourage you to explore various perspectives as well. Your health is a crucial aspect of overall well-being. Based on your concerns, here are some strategies to improve your health:",
+                "I appreciate you opening up to me. Just a heads up, my responses might not cover all aspects of your situation, so I encourage you to explore various perspectives as well. Taking care of your health is important. Consider these evidence-based approaches to address your health-related issues:",
+                "I appreciate you opening up to me. Just a heads up, my responses might not cover all aspects of your situation, so I encourage you to explore various perspectives as well. I understand you're focusing on your health. Here are some tailored suggestions to help you achieve your wellness goals:"
             ],
             advice: [
                 "Establish a consistent sleep schedule, aiming for 7-9 hours of quality sleep each night.",
@@ -141,9 +141,9 @@ document.addEventListener('DOMContentLoaded', () => {
         finance: {
             keywords: ["money", "Job loss", "finance", "budget", "savings", "debt", "investment"],
             responses: [
-                "Financial matters can be complex. Based on your situation, here are some strategies to improve your financial health:",
-                "Managing finances effectively is crucial for long-term stability. Consider these approaches to address your financial concerns:",
-                "I understand you're focusing on your financial situation. Here are some tailored suggestions to help you achieve your financial goals:"
+                "I appreciate you opening up to me. Just a heads up, my responses might not cover all aspects of your situation, so I encourage you to explore various perspectives as well. Financial matters can be complex. Based on your situation, here are some strategies to improve your financial health:",
+                "I appreciate you opening up to me. Just a heads up, my responses might not cover all aspects of your situation, so I encourage you to explore various perspectives as well. Managing finances effectively is crucial for long-term stability. Consider these approaches to address your financial concerns:",
+                "I appreciate you opening up to me. Just a heads up, my responses might not cover all aspects of your situation, so I encourage you to explore various perspectives as well. I understand you're focusing on your financial situation. Here are some tailored suggestions to help you achieve your financial goals:"
             ],
             advice: [
                 "Create a detailed budget to track your income and expenses, identifying areas for potential savings.",
